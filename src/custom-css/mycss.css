@@ -1,0 +1,273 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../font/Poppins-Regular.otf');
+}
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../font/Poppins-Medium.otf');
+}
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../font/Poppins-Bold.otf');
+}
+
+html, body{
+    font-size: 0.87em;
+    font-family: 'Poppins-Regular' !important;
+}
+
+.font-rg{
+    font-family: 'Poppins-Regular' !important;
+}
+.font-md{
+    font-family: 'Poppins-Medium' !important;
+}
+.font-bl{
+    font-family: 'Poppins-Bold' !important;
+}
+
+.font-1{
+    font-size: 0.8em;
+}
+.font-2{
+    font-size: 0.9em;
+}
+.font-3{
+    font-size: 1em;
+}
+.font-4{
+    font-size: 1.2em;
+}
+
+table tr td{
+    border: 1px solid  !important;
+}
+
+.bg-primary-custom{
+    background-color: #02cf98 !important;
+    color:black !important;
+}
+
+.bg-comparison{
+    background-color: #02cf98 !important;
+    color: black !important;
+}
+
+.bg-dark-blue{
+    background-color: #023047;
+    color:white !important;
+}
+.bg-orange{
+    background-color: #F06236 !important;
+}
+.bg-yellow{
+    background-color: #FCC809 !important;
+}
+.bg-dark-gray{
+    background-color: #414342 !important;
+}
+.bg-light-red{
+    background: #e36464 !important;
+    color: white !important;
+}
+
+.bg-none{
+    background: none !important;
+    border: none !important;
+}
+
+.border-none{
+    border: none !important;
+}
+
+.border-primary-custom{
+    border-color: #02cf98 !important;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+  }
+
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #02cf98;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #02cf98;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(55px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.slider:after{
+ content:'OFF';
+ color: white;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 50%;
+ font-size: 10px;
+ font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider:after{  
+  content:'ON';
+}
+
+.switch:before{
+    content:'Dark Mode';
+    position: relative;
+    /* left: -75px; */
+    top: -20px;
+    left: 10px;
+    /* top: 30%; */
+    font-size: 12px;
+}
+
+.float{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    z-index: 1;
+
+}
+
+.base{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float:left;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .base>.potrait-paper-size, .base>.landscape-paper-size{
+        transform: scale(0.8);
+    }
+}
+
+.potrait-paper-size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(190, 190, 190) !important;
+    width: 64mm;
+    height: 96mm;
+    margin: 50px;
+}
+
+.potrait-print-size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 64mm;
+    height: 96mm;
+}
+
+.landscape-paper-size{
+    display: flex;
+    float:left;
+    justify-content: center;
+    align-items: center;
+    background: rgb(190, 190, 190) !important;
+    width: 96mm;
+    height: 64mm;
+    margin: 50px;
+}
+
+.landscape-print-size{
+    display: flex;
+    float:left;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 96mm;
+    height: 64mm;
+}
+
+.shape-print{
+    white-space: nowrap;
+    float: left;
+    background: #FFB703;
+    color: black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 0.1px solid #000000 !important; */
+    border-radius: 3px;
+    font-size: 0.8em;
+    position:relative;
+    box-shadow: inset 0 0 0 0.5px black;
+}
+
+.circle{
+    border-radius: 100% !important;
+}
+.circleX{
+    border-radius: 100% !important;
+}
+
+.outline-none{
+    box-shadow: none !important;
+}
+
+.bg-sec{
+    background-color: #ccc;
+    color :black;
+}

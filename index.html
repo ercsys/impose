@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impose</title>
+    <link href="src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="src/custom-css/mycss.css?v=0.1" rel="stylesheet">
+    <link href="src/custom-css/bootstrap-icons.min.css?v=0.1" rel="stylesheet">
+    <link rel="icon" href="favicon.png">
+
+</head>
+<body id="main" data-bs-theme="dark" >
+    <!-- <nav class="navbar bg-secondary fixed-bottom"> -->
+        <!-- <div class="container-fluid d-flex justify-content-end"> -->
+            <label class="switch float">
+                <input type="checkbox" checked onclick="theme_toggle()">
+                <span class="slider round"></span>
+            </label>
+        <!-- </div> -->
+    <!-- </nav> -->
+<form id="impose">
+<div class="container">
+
+    <div class="row m-1">
+        <div class="col-12 p-0">
+            <div class="card m-2">
+                <div class="card-header bg-primary-custom border-none text-white text-center">
+                    <label class="font-bl">Nama File</label>
+                    <div class="d-inline" style="cursor: pointer; position: absolute; right:10px" title="Copy" onclick="copy()">
+                        <i class="bi bi-clipboard font-4"></i>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <label name="nama_file" id="nama_file">-</label>
+                    <!-- <input class="form-control form-control-sm p-2" type="text" name="nama_file" id="nama_file" /> -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+        
+        <div class="col-12 col-sm-12 col-md-6">
+            <!-- start -->
+            <div class="row m-1">
+                <div class="col-12 d-flex p-0">
+                    <div class="card m-2 flex-fill">                
+                        <div class="card-header bg-primary-custom border-none text-white text-center">
+                            <label class="font-bl">Data Konsumen</label>
+                        </div>
+                        <div class="card-body">
+
+                               <div class="mb-3 row">
+                                    <label for="customer" class="col-sm-3 col-md-2 col-form-label">Customer</label>
+                                    <div class="col-sm-9 col-md-10">
+                                        <input type="text" class="form-control form-control-sm" placeholder="Customer" id="customer" name="customer">
+                                    </div>
+                               </div>
+                              
+                               <div class="mb-3 row">
+                                    <label for="judul_file" class="col-sm-3 col-md-2 col-form-label">Judul File</label>
+                                    <div class="col-sm-9 col-md-10">
+                                        <input type="text" class="form-control form-control-sm" placeholder="Judul File" id="judul_file" name="judul_file">
+                                    </div>
+                              </div>
+        
+                               <div class="mb-3 row">
+                                    <label for="bahan" class="col-sm-3 col-md-2 col-form-label">Bahan</label>
+                                    <div class="col-sm-9 col-md-10">
+                                        <input type="text" class="form-control form-control-sm" placeholder="Bahan" id="bahan" name="bahan">
+                                    </div>
+                              </div>
+        
+                               <div class="mb-3 row">
+                                    <label for="finishing" class="col-sm-3 col-md-2 col-form-label">Finishing</label>
+                                    <div class="col-sm-9 col-md-10">
+                                        <select class="form-select form-control-sm font-3 mb-3" name="finishing_1" id="finishing_1">
+                                            <option value="" selected>Finishing</option>
+                                            <option value="">-None-</option>
+                                            <option value="Potong">Potong</option>
+                                            <option value="Potong Bleed">Potong Bleed</option>
+                                            <option value="Manual Cutter">Manual Cutter</option>
+                                            <option value="KissCut">KissCut</option>
+                                            <option value="DieCut">DieCut</option>
+                                            <option value="Ketok">Ketok</option>
+                                        </select>
+                                        
+                                        <select class="form-select form-control-sm font-3 mb-3" name="finishing_2" id="finishing_2">
+                                            <option value="" selected>Laminasi</option>
+                                            <option value="">-None-</option>
+                                            <option value="Glossy 1s">Glossy 1s</option>
+                                            <option value="Glossy 2s">Glossy 2s</option>
+                                            <option value="Doff 1s">Doff 1s</option>
+                                            <option value="Doff 2s">Doff 2s</option>
+                                            <option value="Press Tebal">Press Tebal</option>
+                                        </select>
+        
+                                        <select class="form-select form-control-sm font-3" name="finishing_3" id="finishing_3">
+                                            <option value="" selected>Lain-Lain</option>
+                                            <option value="">-None-</option>
+                                            <option value="Box">Box</option>
+                                            <option value="Foamboard">Foamboard</option>
+                                            <option value="Lipat">Lipat</option>
+                                            <option value="Staples Tengah">Staples Tengah</option>
+                                            <option value="Staples Kiri">Staples Kiri</option>
+                                            <option value="Lem Panas">Lem Panas</option>
+                                            <option value="Spiral Kiri">Spiral Kiri</option>
+                                            <option value="Spiral Atas">Spiral Atas</option>
+                                            <option value="Spiral Putar">Spiral Putar</option>
+                                        </select>
+                                    </div>
+                              </div>
+        
+                              <div class="mb-3 row">
+                                <label for="kode_nota" class="col-sm-3 col-md-2 col-form-label">Kode Nota</label>
+                                <div class="col-sm-9 col-md-10">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Kode Nota" id="kode_nota" name="kode_nota">
+                                </div>
+                              </div>
+                           
+                              <div class="mb-3 row">
+                                <div class="col-sm-12 col-md-12 col-form-label">
+                                    <button class="btn btn-sm d-block w-100 btn-outline-danger" id="reset">RESET</button>
+                                </div>
+                              </div>
+
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-12 col-md-12 d-flex p-0">
+                    <div class="card m-2 flex-fill">
+                        <div class="card-header bg-primary-custom border-none text-white text-center">
+                            <label class="font-bl">Pengaturan File</label>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3 row">
+                                <label for="susunan" class="col-12 col-form-label">Susunan</label>
+                                <div class="col-12">
+                                    <select class="form-select form-control-sm font-3" name="susunan" id="susunan">
+                                        <option value="1">Standar</option>
+                                        <option value="2">Bulat/Lonjong</option>
+                                        <option value="3">Brick (Bulat/Lojong)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3 row">
+                                <label class="col-12 col-form-label">Ukuran Cetak</label>
+                                <div class="col-12 pl-0">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control form-control-sm" placeholder="Width" name="print_width" id="print_width" autofocus>
+                                        <span class="input-group-text font-3 bg-primary-custom border-primary-custom">x</span>
+                                        <input type="number" class="form-control form-control-sm" placeholder="Height" name="print_height" id="print_height">
+                                        <span class="input-group-text font-2 bg-primary-custom border-primary-custom">mm</span>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="mb-3 row">
+                                <label class="col-12 col-form-label">Jarak Susunan</label>
+                                <div class="col-12 pl-0">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control form-control-sm" placeholder="0" name="left_right" id="left_right">
+                                        <span class="input-group-text font-3 bg-primary-custom border-primary-custom font-4"><i class="bi bi-link-45deg"></i></span>
+                                        <input type="number" disabled class="form-control form-control-sm" placeholder="0" name="top_bottom" id="top_bottom">
+                                        <span class="input-group-text font-2 bg-primary-custom border-primary-custom">mm</span>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="mb-3 row">
+                                <label class="col-12 col-form-label">Sisi Cetak</label>
+                                <div class="col-12">
+                                    <select class="form-select form-control-sm font-3" name="sisi_cetak" id="sisi_cetak">
+                                        <option value="1">1 Sisi</option>
+                                        <option value="2">2 Sisi</option>
+                                        <option value="4">Booklet</option>
+                                    </select>
+                                </div>
+                            </div>
+        
+                            <div class="mb-3 row">
+                                <label class="col-12 col-form-label">Jumlah File</label>
+                                <div class="col-12 pl-0">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control form-control-sm" placeholder="0" name="jumlah_file" id="jumlah_file" value = "1">
+                                        <span class="input-group-text font-3 bg-primary-custom border-primary-custom font-3">Halaman</span>
+                                    </div>
+                                    <span class="font-1"><i class="d-none" id="warning_halaman">* Keterangan</i></span>
+                                </div>
+                            </div>
+        
+                            <div class="mb-3 row">
+                                <label class="col-12 col-form-label">Jumlah Cetak</label>
+                                <div class="col-12 pl-0">
+                                    <div class="input-group">
+                                        <input type="number" class="form-control form-control-sm" placeholder="0" name="jumlah_cetak" id="jumlah_cetak" value = "1">
+                                        <span class="input-group-text font-3 bg-primary-custom border-primary-custom font-3">Pcs</span>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col">
+                                    <table class="table border text-center" border="1">
+                                        <tr>
+                                            <td colspan="2" class="bg-primary-custom font-bl">Hasil</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-6 border" id="potrait_row_col">Potrait</td>
+                                            <td class="col-6 border" id="landscape_row_col">Landscape</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border" id="potrait_result">-</td>
+                                            <td class="border" id="landscape_result">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border font-bl" id="potrait_qty">-</td>
+                                            <td class="border font-bl" id="landscape_qty">-</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+            <!-- end -->
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-6">
+            <!-- start   -->
+            <div class="row m-1 mb-5">
+                <div class="col-12 p-0 mb-5">
+                    <div class="card m-2">
+                        <div class="card-header bg-primary-custom border-none text-white text-center">
+                            <label class="font-bl">Preview</label>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-sm-auto mb-3">
+                                    <div class="base bg-secondary p-2 rounded" id="base_potrait">
+        
+                                        <div class="text-white bg-dark-blue rounded font-bold p-2 pb-0 pt-0" id="potrait_file_size" style="position:absolute; top:10px;">Ukuran File : 0x0cm</div>
+                                        <div id="potrait_width_paper" style="position:absolute; top:30px; font-size:12px">32.5cm</div>
+                                        <div id="potrait_height_paper" style="position:absolute; right:0;transform: rotate(90deg); font-size:12px">48.7cm</div>
+                                        <div style="position:absolute; bottom:10px;">Potrait Preview</div>
+                                    
+                                        <div class="potrait-paper-size shadow" id="potrait_size">
+                                            <div class="potrait-print-size" id="potrait_area">
+                                                <div class="potrait-print-item" id="potrait_item">
+                                                    <!-- <div class="shape-print">Invalid</div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                 
+                                    </div>
+                                
+                                </div>
+        
+                                <div class="col-12 col-sm-auto mb-3">
+        
+                                    <div class="base bg-secondary p-2 rounded" id="base_landscape">
+        
+                                        <div class="text-white bg-dark-blue rounded font-bold p-2 pb-0 pt-0" id="landscape_file_size" style="position:absolute; top:10px;">Ukuran File : 0x0cm</div>
+                                        <div id="landscape_width_paper" style="position:absolute; top:30px; font-size:12px">48.7cm</div>
+                                        <div id="landscape_height_paper" style="position:absolute; right:0;transform: rotate(90deg); font-size:12px">32.5cm</div>
+                                        <div style="position:absolute; bottom:10px;">Landscape Preview</div>
+                                    
+                                        <div class="landscape-paper-size shadow" id="landscape_size">
+                                            <div class="landscape-print-size" id="landscape_area">
+                                                <div class="landscape-print-item" id="landscape_item">
+                                                    <!-- <div class="shape-print">Invalid</div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                 
+                                    </div>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end         -->
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 d-flex p-0">
+        <div class="card m-2 flex-fill">
+            <div class="card-header bg-primary-custom border-none text-white text-center">
+                <label class="font-bl">Pengaturan Standar</label>
+            </div>
+            <div class="card-body">        
+                <div class="mb-3 row">
+                    <label for="paper_size" class="col-12 col-form-label">Paper</label>
+                    <div class="col-12">
+                        <select class="form-select form-control-sm font-3" name="paper_size" id="paper_size">
+                            <option value="" selected>Custom Size</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-12 col-form-label">Ukuran Bahan</label>
+                    <div class="col-12 pl-0">
+                        <div class="input-group">
+                            <input type="number" class="form-control form-control-sm" placeholder="Width" name="paper_width" id="paper_width" value="325">
+                            <span class="input-group-text font-3 bg-primary-custom border-primary-custom">x</span>
+                            <input type="number" class="form-control form-control-sm" placeholder="Height" name="paper_height" id="paper_height" value="487">
+                            <span class="input-group-text font-2 bg-primary-custom border-primary-custom">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <label class="col-12 col-form-label">Area Cetak</label>
+                    <div class="col-12 pl-0">
+                        <div class="input-group">
+                            <input type="number" disabled class="form-control form-control-sm" placeholder="Width" name="area_width" id="area_width" value="320">
+                            <span class="input-group-text font-3 bg-primary-custom border-primary-custom">x</span>
+                            <input type="number" disabled class="form-control form-control-sm" placeholder="Height" name="area_height" id="area_height" value="480">
+                            <span class="input-group-text font-2 bg-primary-custom border-primary-custom">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    
+
+</div>
+
+</form>
+
+</body>
+</html>
+
+<script src="src/js/popper.min.js"></script>
+<script src="src/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<script>
+  const form = document.getElementById('impose');
+  form.addEventListener('keypress', function(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+    }
+  });
+</script>

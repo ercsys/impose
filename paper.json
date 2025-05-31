@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "A3+",
+        "paper_width" : 325,
+        "paper_height" : 487,
+        "area_width" : 320,
+        "area_height" : 480
+    },
+    {
+        "id": 2,
+        "title": "A4",
+        "paper_width" : 210,
+        "paper_height" : 297,
+        "area_width" : 205,
+        "area_height" : 292
+    },
+    {
+        "id": 3,
+        "title": "1m",
+        "paper_width" : 1050,
+        "paper_height" : 1050,
+        "area_width" : 1030,
+        "area_height" : 1030
+    },
+    {
+        "id": 4,
+        "title": "Plano 0.79x1.09m",
+        "paper_width" : 709,
+        "paper_height" : 1090,
+        "area_width" : 709,
+        "area_height" : 1090
+    }
+]
