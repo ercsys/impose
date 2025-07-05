@@ -44,12 +44,12 @@ table tr td{
 }
 
 .bg-primary-custom{
-    background-color: #02cf98 !important;
-    color:black !important;
+    background-color: oklch(55.3% 0.013 58.071) !important;
+    color:white !important;
 }
 
 .bg-comparison{
-    background-color: #02cf98 !important;
+    background-color: oklch(55.3% 0.013 58.071) !important;
     color: black !important;
 }
 
@@ -81,7 +81,7 @@ table tr td{
 }
 
 .border-primary-custom{
-    border-color: #02cf98 !important;
+    border-color: oklch(55.3% 0.013 58.071) !important;
 }
 
 /* The switch - the box around the slider */
@@ -126,11 +126,11 @@ table tr td{
   }
   
   input:checked + .slider {
-    background-color: #02cf98;
+    background-color: oklch(55.3% 0.013 58.071);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #02cf98;
+    box-shadow: 0 0 1px oklch(55.3% 0.013 58.071);
   }
   
   input:checked + .slider:before {
